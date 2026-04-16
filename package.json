@@ -1,0 +1,22 @@
+{
+  "name": "ai-refactored-pw-as",
+  "version": "1.0.0",
+  "description": "Playwright tests refactoring project",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "typescript": "^5.0.0"
+  }
+}
