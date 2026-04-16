@@ -90,6 +90,16 @@ The project uses GitHub Actions for continuous integration:
 - **Linting**: ESLint checks for code quality
 - **Testing**: Runs tests across Chromium, Firefox, and WebKit
 - **Reporting**: Uploads test artifacts for analysis
+- **System Dependencies**: Automatically installed via `playwright install-deps` for browser support
+
+### Why System Dependencies Matter
+
+When running in GitHub Actions (Ubuntu environment), additional system libraries are required for browsers:
+- **WebKit** requires GTK, GStreamer, and multimedia libraries
+- **Firefox** requires additional graphics and codec libraries
+- **Chromium** has fewer dependencies but still needs some libraries
+
+These dependencies are pre-installed on local macOS but absent in the minimal Ubuntu container used by GitHub Actions. The CI workflow handles this automatically with `npx playwright install-deps`.
 
 ### Viewing CI Reports
 
